@@ -6,7 +6,7 @@ function obfee_addHideButtons() {
 
         const hideButton = document.createElement('button');
         hideButton.setAttribute('title', 'Скрывать / Показывать комментарии этого профиля');
-        hideButton.innerHTML = `Скрыть навсегда!`;
+        hideButton.innerHTML = `On/Off`;
 
         const profileUrl = node.getAttribute('href');
         hideButton.addEventListener('click', () => {
@@ -29,17 +29,14 @@ function obfee_hideTexts() {
                 searchNode = searchNode.parentNode;
             }
 
-            // searchNode.parentNode.removeChild(searchNode);
-            console.log('CENSORED: ', profileUrl, searchNode);
-            searchNode.innerHTML = 'Сообщение скрыто';
-            // if (searchNode) {
-            //     searchNode.childNodes.forEach(childNode => {
-            //         if (childNode.getAttribute('class') == 'news-comment__speech news-comment__speech_base' ||
-            //             childNode.getAttribute('class') == 'news-comment__preview') {
-            //             childNode.style.opacity = "0.01";
-            //         }
-            //     })
-            // }
+            if (searchNode) {
+                searchNode.style.background = 'rgb(51, 51, 51)';
+                searchNode.childNodes.forEach(childNode => {
+                    if (childNode.getAttribute('class') == 'news-comment__preview') {
+                        childNode.style.opacity = "0.01";
+                    }
+                })
+            }
         }
     });
 };
