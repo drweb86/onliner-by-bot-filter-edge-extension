@@ -1,0 +1,24 @@
+{
+  "name": "onliner-by-bot-filter-edge-extension",
+  "version": "1.0.0",
+  "description": "An extension for Microsoft Edge / Chrome browser to hide comments of bots on onliner.by web-site",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drweb86/onliner-by-bot-filter-edge-extension.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drweb86/onliner-by-bot-filter-edge-extension/issues"
+  },
+  "homepage": "https://github.com/drweb86/onliner-by-bot-filter-edge-extension#readme",
+  "dependencies": {
+    "@types/chrome": "^0.0.140",
+    "install": "^0.13.0",
+    "npm": "^7.13.0"
+  }
+}
